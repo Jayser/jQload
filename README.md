@@ -5,14 +5,13 @@
 <p>Need add to parent container class jQload</p>
 
 <code>
-	<div class="class1 class2 jQload">
+	&lt;div class="class1 class2 jQload"&gt;
 		...
-	</div>
+	&lt;/div&gt;
 </code>
 
 <h2>JS</h2>
-
 <p>
-	$(selector).jQload('show/hide');
+	$(selector).jQload('show/hide');<br>
 	$('window').jQload('show/hide');
 </p>

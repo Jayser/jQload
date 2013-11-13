@@ -4,13 +4,9 @@
 
 <p>Need add to parent container class jQload</p>
 
-<pre>
-	<code>
-		&lt;div class="class1 class2 jQload"&gt;
-			...
-		&lt;/div&gt;<br>
-	</code>
-</pre>
+<pre><code>&lt;div class="class1 class2 jQload"&gt;
+	...
+	&lt;/div&gt;</code></pre>
 
 <h2>JS</h2>
 <p>

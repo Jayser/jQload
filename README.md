@@ -5,9 +5,9 @@
 <p>Need add to parent container class jQload</p>
 
 <code>
-	&lt;div class="class1 class2 jQload"&gt;
-		...
-	&lt;/div&gt;
+	&lt;div class="class1 class2 jQload"&gt;<br>
+	&nbsp;&nbsp;&nbsp;&nbsp;...<br>
+	&lt;/div&gt;<br>
 </code>
 
 <h2>JS</h2>

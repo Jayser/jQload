@@ -6,7 +6,7 @@
 
 <pre><code>&lt;div class="class1 class2 jQload"&gt;
 	...
-	&lt;/div&gt;</code></pre>
+&lt;/div&gt;</code></pre>
 
 <h2>JS</h2>
 <p>

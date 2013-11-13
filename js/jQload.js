@@ -1,27 +1,23 @@
 /*
  * jQload v0.1  
- *
- * $(selector).jQload('show/hide');
- * $('window').jQload('show/hide');
- *
  */
 (function( $ ){
     
-    // jQpup
     $.fn.jQload = function(status) 
     {
-        var _jQloadOverview = $('<div class="jQload-overview"><i class="jQload-icon"></i></div>');
+        var $_jQloadOverview = $('<div class="jQload-overview"><i class="jQload-icon"></i></div>'),
+            _popup           = $('body > .jQload-overview').length;
 
-        if( this.selector === 'window'  && status === 'show' ){
+        if( this.selector === 'window' && status === 'show' && _popup === 0 ){
 
             $d = $(document);
 
-            _jQloadOverview.height( $d.height() ).width( $d.width() );
+            $_jQloadOverview.height( $d.height() ).width( $d.width() );
 
-            $('body').append( _jQloadOverview );
+            $('body').append( $_jQloadOverview );
 
-            $(window).resize(function()
-            {
+            $(window).resize(function(){
+                
                 var $popup = $('body > .jQload-overview'),
                     $d     = $(document);
 
@@ -31,14 +27,14 @@
                 
             });
 
-        } else if( this.selector === 'window'  && status === 'hide' ){
+        } else if( this.selector === 'window' && status === 'hide' ){
             $('body > .jQload-overview').remove();
         }
         else {
             return this.each(function() {
                 if( $(this).find('.jQload-overview').length === 0 && status === 'show' ){
 
-                    $(this).append( _jQloadOverview );
+                    $(this).append( $_jQloadOverview );
 
                 } 
                 else if( status === 'hide' ) {

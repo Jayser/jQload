@@ -10,15 +10,18 @@
     // jQpup
     $.fn.jQload = function(status) 
     {
-        var _jQloadOverview = $('<div class="jQload-overview"><i class="jQload-icon"></i></div>');
+        var $_jQloadOverview = $('<div class="jQload-overview"><i class="jQload-icon"></i></div>'),
+            _popup          = $('body > .jQload-overview').length;
 
-        if( this.selector === 'window'  && status === 'show' ){
+            console.log( _popup );
+
+        if( this.selector === 'window' && status === 'show' && _popup !== 0 ){console.log( _popup );
 
             $d = $(document);
 
-            _jQloadOverview.height( $d.height() ).width( $d.width() );
+            $_jQloadOverview.height( $d.height() ).width( $d.width() );
 
-            $('body').append( _jQloadOverview );
+            $('body').append( $_jQloadOverview );
 
             $(window).resize(function()
             {
@@ -38,7 +41,7 @@
             return this.each(function() {
                 if( $(this).find('.jQload-overview').length === 0 && status === 'show' ){
 
-                    $(this).append( _jQloadOverview );
+                    $(this).append( $_jQloadOverview );
 
                 } 
                 else if( status === 'hide' ) {
